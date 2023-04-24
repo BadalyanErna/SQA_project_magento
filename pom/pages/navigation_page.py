@@ -12,6 +12,8 @@ class NavigationPage(BasePage):
     MEN_BUTTON = (By.ID, 'ui-id-5')
     BOTTOMS_BUTTON = (By.ID, 'ui-id-18')
     SHORTS_BUTTON = (By.ID, 'ui-id-24')
+    GEAR_BUTTON = (By.ID, 'ui-id-6')
+    BAGS_BUTTON = (By.ID, 'ui-id-25')
 
     def open_women_tops_hoodies(self):
         self.hover(self.get_wait().wait_for_element(self.WOMEN_BUTTON))
@@ -22,3 +24,7 @@ class NavigationPage(BasePage):
         self.hover(self.get_wait().wait_for_element(self.MEN_BUTTON))
         self.hover(self.get_wait().wait_for_element(self.BOTTOMS_BUTTON))
         self.click(self.get_wait().wait_for_element(self.SHORTS_BUTTON))
+
+    def open_gear_bags(self):
+        self.hover(self.get_wait().wait_for_element(self.GEAR_BUTTON))
+        self.click(self.get_wait().wait_for_element(self.BAGS_BUTTON))
